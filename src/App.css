@@ -150,7 +150,7 @@
 
   .data-card-section {
     position: relative;
-    margin: 0;
+    margin: 0 0 60px 0;
     min-height: auto;
   }
 }
@@ -174,6 +174,10 @@
     flex-direction: column;
     gap: 10px;
     min-height: auto;
+    margin: 0 0 40px 0;
+  }
+  .data-card {
+    padding: 16px 12px;
   }
   .text-sticky {
     background: rgba(248, 249, 253, 0.8);
@@ -184,6 +188,35 @@
   }
   .text-sticky p {
     font-size: 13px;
+  }
+
+  /* 차트 크기 조정 */
+  .recharts-wrapper {
+    width: 100% !important;
+    max-height: 280px !important;
+  }
+
+  .recharts-surface {
+    width: 100% !important;
+  }
+
+  /* 차트 텍스트 크기 조정 */
+  .recharts-text {
+    font-size: 11px !important;
+  }
+
+  .recharts-cartesian-axis-tick {
+    font-size: 11px !important;
+  }
+
+  /* 차트 타이틀 크기 조정 */
+  .data-card h2 {
+    font-size: 16px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .data-card h3 {
+    font-size: 14px !important;
   }
 }
 
