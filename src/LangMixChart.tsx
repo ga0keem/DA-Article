@@ -37,7 +37,7 @@ function LangMixChart() {
         <h2 style={{ textAlign: "center", marginBottom: 20, fontSize: 18 }}>
             연도별 언어‧한국어능력 충족 비율 <span style={{ fontSize: 12, color: "#45537A" }}>학부 기준</span>
         </h2>
-        <div ref={chartRef}>
+        <div ref={chartRef} className="w-full flex flex-col items-center">
             {animate && (
                 <ResponsiveContainer width="100%" height={300}>
                     <ComposedChart data={langStats} margin={{ top: 40, right: 30, left: 30, bottom: 5 }}>

@@ -29,7 +29,7 @@ function EduAbroadBarChart() {
         <h2 style={{ textAlign: "center", marginBottom: 20, fontSize: 18  }}>
             연도별 유학생 수
         </h2>
-        <div ref={chartRef}>
+        <div ref={chartRef} className="w-full flex flex-col items-center">
             {animate && (
                 <ResponsiveContainer width="100%" height={300}>
                     <BarChart data={studentStats} margin={{ top: 40, right: 30, left: 30, bottom: 5 }}>

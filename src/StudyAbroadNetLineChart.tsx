@@ -46,7 +46,7 @@ function StudyAbroadNetLineChart() {
         <h2 style={{ textAlign: "center", marginBottom: 20, fontSize: 18 }}>
             연도별 유학연수 국제수지 추이
         </h2>
-        <div ref={chartRef}>
+        <div ref={chartRef} className="w-full flex flex-col items-center">
             {animate && (
                 <ResponsiveContainer width="100%" height={350}>
                     <LineChart data={statsWithNet} margin={{ top: 40, right: 30, left: 30, bottom: 5 }}>

@@ -52,7 +52,7 @@ function RegionBarChart() {
         <h2 style={{ textAlign: "center", marginBottom: 20, fontSize: 18 }}>
             시도별 유학생 비율 비교 (%) <span style={{ fontSize: 12, color: "#45537A" }}>25년 기준</span>
         </h2>
-        <div ref={chartRef}>
+        <div ref={chartRef} className="w-full flex flex-col items-center">
             {animate && (
                 <ResponsiveContainer width="100%" height={650}>
                     <BarChart
