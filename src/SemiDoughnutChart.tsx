@@ -93,7 +93,7 @@ function SemiDoughnutCharts() {
         </div>
 
         {/* 주요 국가별 도넛 차트 */}
-        <div style={{ width: "100%", maxWidth: 600 }}>
+        <div style={{ width: "100%", maxWidth: 400 }}>
             <h2 style={{ textAlign: "center", marginBottom: 18, fontSize: 18 }}>
             주요 국가별 유학생 비율 <span style={{ fontSize: 12, color: "#45537A" }}>24년 기준</span>
             </h2>
