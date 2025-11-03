@@ -84,6 +84,8 @@
   min-width: 160px;
   width: 100%;
   max-width: 800px;
+  position: relative;
+  background: #F1F2F8;
 }
 
 .byline {
@@ -107,7 +109,7 @@
   .chart-column {
     max-width: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 5;
     padding-bottom: 200px;
   }
 
@@ -152,6 +154,13 @@
     position: relative;
     margin: 0 0 60px 0;
     min-height: auto;
+    z-index: 5;
+  }
+
+  .data-card {
+    position: relative;
+    z-index: 5;
+    background: #F1F2F8;
   }
 }
 
@@ -191,33 +200,33 @@
   }
 
   /* 차트 크기 조정 */
-  .recharts-wrapper {
+  /* .recharts-wrapper {
     width: 100% !important;
     max-height: 280px !important;
   }
 
   .recharts-surface {
     width: 100% !important;
-  }
+  } */
 
   /* 차트 텍스트 크기 조정 */
-  .recharts-text {
+  /* .recharts-text {
     font-size: 11px !important;
   }
 
   .recharts-cartesian-axis-tick {
     font-size: 11px !important;
-  }
+  } */
 
   /* 차트 타이틀 크기 조정 */
-  .data-card h2 {
+  /* .data-card h2 {
     font-size: 16px !important;
     margin-bottom: 16px !important;
   }
 
   .data-card h3 {
     font-size: 14px !important;
-  }
+  } */
 }
 
 .summary-desc {
