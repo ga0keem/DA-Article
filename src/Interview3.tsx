@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import male3 from "./assets/male 3.png";
-import female3 from "./assets/female 3.png";
+import male3 from "./assets/male-3.png";
+import female3 from "./assets/female-3.png";
 import "./Interview3.css";
 
 const balloons = [

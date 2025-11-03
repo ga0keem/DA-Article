@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import female2 from "./assets/female 2.png";
+import female2 from "./assets/female-2.png";
 import "./Interview2.css";
 
 const Interview2: React.FC = () => {

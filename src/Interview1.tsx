@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import male1 from "./assets/male 1.png";
-import male2 from "./assets/male 2.png";
+import male1 from "./assets/male-1.png";
+import male2 from "./assets/male-2.png";
 import "./Interview1.css";
 
 const Interview1: React.FC = () => {
