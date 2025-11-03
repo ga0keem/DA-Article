@@ -102,7 +102,7 @@
     padding: 50px 0 32px;
 }
 .subtitle {
-    font-family: "TAEBAEK font";
+    font-family: 'TAEBAEK', 'Pretendard', sans-serif;
     font-size: 24px;
     color: #8F6591;
     font-style: normal;
@@ -111,7 +111,7 @@
     animation: fadeIn 1.2s ease-out;
 }
 .main-title {
-    font-family: "TAEBAEK font";
+    font-family: 'TAEBAEK', 'Pretendard', sans-serif;
     font-size: 54px;
     color: #000;
     font-style: normal;

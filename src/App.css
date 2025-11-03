@@ -1,5 +1,5 @@
 .article-root {
-  font-family: 'Pretendard', 'TAEBAEK', 'Nanum Myeongjo', 'sans-serif';
+  font-family: 'Pretendard', sans-serif;
   background: #F1F2F8;
   color: #222;
   /* max-width: 1000px; */
@@ -228,7 +228,7 @@
   max-width: 760px;
   word-break: keep-all;
   letter-spacing: -0.03em;
-  font-family: 'Pretendard', 'TAEBAEK', 'Nanum Myeongjo', 'sans-serif';
+  font-family: 'Pretendard', sans-serif;
   padding: 0 20px;
 }
 

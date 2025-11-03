@@ -29,7 +29,7 @@ function MajorCountryLineChart() {
                 setAnimate(true);
                 observer.disconnect(); // 최초 한 번만 트리거
             }
-        }, { threshold: 0.3 });
+        }, { threshold: 0.1, rootMargin: "50px" });
         if (chartRef.current) observer.observe(chartRef.current);
         return () => observer.disconnect();
     }, []);

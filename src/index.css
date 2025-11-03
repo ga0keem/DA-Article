@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'TAEBAEK';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/TAEBAEKfont.woff2') format('woff2'),
+       url('/fonts/TAEBAEKfont.woff') format('woff');
+  font-display: swap;
+}
+
 html, body, #root {
   margin: 0;
   padding: 0;
