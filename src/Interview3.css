@@ -1,0 +1,120 @@
+.interview3-root {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    height: 52vh;
+    background: #f1f2f8;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interview3-img {
+    position: absolute;
+    top: 53%;
+    transform: translateY(-52%);
+    width: 210px;
+    height: 210px;
+    max-width: 44vw;
+    min-width: 80px;
+    object-fit: contain;
+    z-index: 2;
+}
+
+.img-male {
+    left: 25%;
+}
+
+.img-female {
+    right: 25%;
+}
+
+/* 말풍선 공통 */
+.interview3-balloon {
+    position: absolute;
+    padding: 15px 32px;
+    background: rgba(252, 253, 254, 0.97);
+    border-radius: 30px;
+    box-shadow: 0 3px 20px rgba(120, 120, 150, 0.15);
+    color: #222;
+    font-size: 1.06rem;
+    min-width: 124px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s;
+    z-index: 3;
+    }
+
+/* 각각 위치 조정 */
+.balloon-top {
+    top: 5%;
+    left: 40%;
+}
+.balloon-left {
+    top: 30%;
+    left: 5%;
+}
+.balloon-right {
+    top: 30%;
+    right: 5%;
+}
+
+/* 등장 애니메이션 - 팝업 효과 (interview2와 동일) */
+.interview3-balloon.visible {
+    opacity: 1;
+    animation: balloonFadeIn 0.5s;
+}
+
+@keyframes balloonFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width: 700px) {
+    .interview3-root {
+        min-height: 200px;
+        height: 250px;
+    }
+    .interview3-img {
+        width: 150px;
+        height: 150px;
+        min-width: 70px;
+        object-fit: contain;
+    }
+    .img-male {
+        left: 25%;
+    }
+    .img-female {
+        right: 25%;
+    }
+    .balloon-top {
+        top: 5%;
+        left: 40%;
+        padding: 9px 18px;
+        font-size: 0.85rem;
+    }
+    .balloon-left {
+        left: 2%;
+        top: 30%;
+        padding: 9px 18px;
+        font-size: 0.85rem;
+    }
+    .balloon-right {
+        right: 2%;
+        top: 30%;
+        padding: 9px 18px;
+        font-size: 0.85rem;
+    }
+    .interview3-balloon {
+        min-width: 90px;
+        border-radius: 16px;
+    }
+}
