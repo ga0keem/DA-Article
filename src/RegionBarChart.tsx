@@ -58,7 +58,7 @@ function RegionBarChart() {
                     <BarChart
                     layout="vertical"
                     data={sortedData}
-                    margin={{ top: 20, right: 40, left: 40, bottom: 50 }}
+                    margin={{ top: 20, right: 40, left: 10, bottom: 50 }}
                     >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis

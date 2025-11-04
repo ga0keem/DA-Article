@@ -27,6 +27,7 @@ const COUNTRY_COLORS = ["#B783B9", "#B0D1ED", "#FDE583", "#F5A883", "#F3A1B5", "
 function SemiDoughnutCharts() {
     const chartRef = useRef<HTMLDivElement | null>(null);
     const [animate, setAnimate] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
         const observer = new window.IntersectionObserver(([entry]) => {
@@ -37,6 +38,14 @@ function SemiDoughnutCharts() {
         }, { threshold: 0.1, rootMargin: "50px" });
         if (chartRef.current) observer.observe(chartRef.current);
         return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return (
@@ -54,8 +63,8 @@ function SemiDoughnutCharts() {
             출신지역별 유학생 수 현황 <span style={{ fontSize: 12, color: "#45537A" }}>24년 기준</span>
             </h2>
             {animate && (
-                <ResponsiveContainer width="100%" height={200}>
-                <PieChart>
+                <ResponsiveContainer width="100%" height={isMobile ? 180 : 220}>
+                <PieChart margin={{ top: 20, right: 30, bottom: 0, left: 30 }}>
                     <Pie
                     data={sortedData}
                     dataKey="count"
@@ -64,14 +73,14 @@ function SemiDoughnutCharts() {
                     cy="100%"
                     startAngle={180}
                     endAngle={0}
-                    innerRadius={50}
-                    outerRadius={110}
+                    innerRadius={isMobile ? 40 : 50}
+                    outerRadius={isMobile ? 90 : 110}
                     paddingAngle={3}
                     label={({ name, percent, x, y }) => (
                         <text
                         x={x}
                         y={y}
-                        fontSize={name === "아시아" ? 16 : 9}
+                        fontSize={name === "아시아" ? (isMobile ? 14 : 16) : (isMobile ? 8 : 9)}
                         fill="#222"
                         fontWeight={name === "아시아" ? 500 : 400}
                         alignmentBaseline="middle"
@@ -98,8 +107,8 @@ function SemiDoughnutCharts() {
             주요 국가별 유학생 비율 <span style={{ fontSize: 12, color: "#45537A" }}>24년 기준</span>
             </h2>
             {animate && (
-                <ResponsiveContainer width="100%" height={200}>
-                <PieChart>
+                <ResponsiveContainer width="100%" height={isMobile ? 180 : 220}>
+                <PieChart margin={{ top: 20, right: 30, bottom: 0, left: 30 }}>
                     <Pie
                     data={countryData}
                     dataKey="ratio"
@@ -108,14 +117,14 @@ function SemiDoughnutCharts() {
                     cy="100%"
                     startAngle={180}
                     endAngle={0}
-                    innerRadius={50}
-                    outerRadius={110}
+                    innerRadius={isMobile ? 40 : 50}
+                    outerRadius={isMobile ? 90 : 110}
                     paddingAngle={3}
                     label={({ country, percent, x, y }) => (
                         <text
                         x={x}
                         y={y}
-                        fontSize={country === "중국" ? 16 : 9}
+                        fontSize={country === "중국" ? (isMobile ? 14 : 16) : (isMobile ? 8 : 9)}
                         fill="#222"
                         fontWeight={country === "중국" ? 500 : 400}
                         alignmentBaseline="middle"

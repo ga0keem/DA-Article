@@ -84,32 +84,32 @@
         height: 250px;
     }
     .interview3-img {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         min-width: 70px;
         object-fit: contain;
     }
     .img-male {
-        left: 25%;
+        left: 15%;
     }
     .img-female {
-        right: 25%;
+        right: 5%;
     }
     .balloon-top {
-        top: 5%;
-        left: 40%;
+        top: 2%;
+        left: 30%;
         padding: 9px 18px;
         font-size: 0.85rem;
     }
     .balloon-left {
         left: 2%;
-        top: 30%;
+        top: 20%;
         padding: 9px 18px;
         font-size: 0.85rem;
     }
     .balloon-right {
         right: 2%;
-        top: 30%;
+        top: 20%;
         padding: 9px 18px;
         font-size: 0.85rem;
     }

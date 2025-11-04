@@ -60,7 +60,7 @@ function DropoutRegionBarChart() {
                     <BarChart
                     layout="vertical"
                     data={sortedDropoutData}
-                    margin={{ top: 20, right: 80, left: 40, bottom: 50 }}
+                    margin={{ top: 20, right: 40, left: 10, bottom: 50 }}
                     >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis

@@ -98,6 +98,11 @@
   margin-top: 48px;
 }
 
+/* 모바일용 텍스트 (기본 숨김) */
+.mobile-text {
+  display: none;
+}
+
 /* 반응형 디자인 */
 @media screen and (max-width: 1024px) {
   .content-wrapper {
@@ -108,58 +113,49 @@
 
   .chart-column {
     max-width: 100%;
-    position: relative;
-    z-index: 5;
-    padding-bottom: 200px;
+    padding-bottom: 40px;
   }
 
+  /* 데스크톱용 텍스트 컬럼 숨김 */
   .text-column {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    z-index: 10;
-    pointer-events: none;
+    display: none;
   }
 
-  .text-sticky {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 100vh;
-    background: rgba(248, 249, 253, 0.95);
+  /* 모바일용 텍스트 표시 */
+  .mobile-text {
+    display: block;
     padding: 24px;
-    margin: 0;
-    border-radius: 16px 16px 0 0;
-    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
-    will-change: top, opacity;
-    pointer-events: auto;
-    opacity: 0;
-    visibility: hidden;
-    display: block !important;
+    background: #f8f9fd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
   }
 
-  .text-sticky h3 {
+  .mobile-text h3 {
+    font-family: 'Pretendard', sans-serif;
     font-size: 18px;
+    font-weight: 700;
+    color: #222;
     margin-bottom: 10px;
+    line-height: 1.4;
   }
 
-  .text-sticky p {
-    font-size: 14px;
-    line-height: 1.6;
+  .mobile-text p {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.7;
   }
 
   .data-card-section {
     position: relative;
-    margin: 0 0 60px 0;
+    margin: 0 0 40px 0;
     min-height: auto;
-    z-index: 5;
   }
 
   .data-card {
     position: relative;
-    z-index: 5;
     background: #F1F2F8;
   }
 }
@@ -177,26 +173,25 @@
     padding: 20px 10px;
   }
   .chart-column {
-    padding-bottom: 180px;
+    padding-bottom: 40px;
   }
   .data-card-section {
     flex-direction: column;
     gap: 10px;
     min-height: auto;
-    margin: 80px 0 80px 0;
+    margin: 0 0 30px 0;
   }
   .data-card {
     padding: 16px 12px;
   }
-  .text-sticky {
-    background: rgba(248, 249, 253, 0.8);
+  .mobile-text {
     padding: 16px;
   }
-  .text-sticky h3 {
+  .mobile-text h3 {
     font-size: 16px;
   }
-  .text-sticky p {
-    font-size: 13px;
+  .mobile-text p {
+    font-size: 14px;
   }
 
   /* 차트 크기 조정 */
