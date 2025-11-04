@@ -38,7 +38,7 @@ function getRandomForeignIndexes(foreignCount: number): number[] {
 const Intro: React.FC = () => {
     const [step, setStep] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
-    const foreignIndexesCache = useRef<number[] | null>(null);
+    const foreignIndexesCache = useRef<number[]>(getRandomForeignIndexes(introDatasets[0].count));
     const containerRef = useRef<HTMLDivElement>(null);
 
     // 모바일 체크
@@ -93,7 +93,7 @@ const Intro: React.FC = () => {
 
     const makePeopleIcons = (): React.ReactNode[] => {
         const icons: React.ReactNode[] = [];
-        const foreignIndexes = foreignIndexesCache.current ?? [];
+        const foreignIndexes = foreignIndexesCache.current;
 
         for (let i = 0; i < 100; i++) {
             if (foreignIndexes.includes(i)) {
