@@ -2,7 +2,6 @@
   font-family: 'Pretendard', sans-serif;
   background: #F1F2F8;
   color: #222;
-  /* max-width: 1000px; */
   margin: 0 auto;
 }
 
@@ -193,35 +192,6 @@
   .mobile-text p {
     font-size: 14px;
   }
-
-  /* 차트 크기 조정 */
-  /* .recharts-wrapper {
-    width: 100% !important;
-    max-height: 280px !important;
-  }
-
-  .recharts-surface {
-    width: 100% !important;
-  } */
-
-  /* 차트 텍스트 크기 조정 */
-  /* .recharts-text {
-    font-size: 11px !important;
-  }
-
-  .recharts-cartesian-axis-tick {
-    font-size: 11px !important;
-  } */
-
-  /* 차트 타이틀 크기 조정 */
-  /* .data-card h2 {
-    font-size: 16px !important;
-    margin-bottom: 16px !important;
-  }
-
-  .data-card h3 {
-    font-size: 14px !important;
-  } */
 }
 
 .summary-desc {
